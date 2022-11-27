@@ -635,3 +635,200 @@ footer {
 .card_serv_footer p{
     text-align: justify;
 }
+
+
+/*paquetes*/
+.paquetes {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: stretch;
+    max-width: 900px;
+    margin: 40px auto;
+    justify-content: space-around;
+}
+@media all and (max-width: 900px) {
+    .paquetes {
+        width: 100%;
+   }
+}
+@media all and (max-width: 725px) {
+    .paquetes {
+        flex-direction: column;
+   }
+    .card_paq {
+        width: 100%;
+   }
+}
+.card_paq {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 20px;
+    background: #fff;
+    border: #ecedf0 4px solid;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+.card_paq:last-of-type {
+    margin-right: 0;
+}
+.card_paq:nth-of-type(2) {
+    animation-delay: 0.5s;
+    animation-duration: 1.75s;
+}
+.card_paq:nth-of-type(3) {
+    animation-delay: 1s;
+    animation-duration: 2s;
+}
+
+.card_paq a {
+    position: relative;
+    font-weight: bold;
+    font-size: 0.8em;
+    background: #5eb56b;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    align-self: center;
+    padding: 10px 20px;
+    border-bottom: 3px #367740 solid;
+    overflow: hidden;
+}
+
+.card_paq ul {
+    list-style-type: none;
+    padding: 10px 0 15px 0;
+}
+.card_paq ul li {
+    font-size: 0.8em;
+    padding-bottom: 10px;
+}
+.card_paq ul li:first-of-type {
+    padding-top: 10px;
+}
+.card_paq h1 {
+    font-size: 1em;
+    font-weight: 500;
+}
+.card_paq h2 {
+    padding: 3px 5px 15px 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.card_paq_price {
+    width: 100%;
+    background: #ecedf0;
+}
+.card_paq h3 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card_paq h3 span {
+    font-weight: 400;
+    font-size: 0.4em;
+}
+
+/* misión y vision */
+.SobreNosotros{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.mision{
+    display: grid;
+    grid-template-columns: 50% 30%;
+    padding: 2rem;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.vision{
+    display: grid;
+    grid-template-columns: 30% 50%;
+    padding: 2rem;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: end;
+}
+
+.card_vis,
+.card_mis{
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.mision .icon,
+.vision .icon{
+    width: 200px;
+}
+
+
+/*  */
+form {
+    display: grid; 
+  /*grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; */
+  grid-template-areas: 
+    "name name"
+    "email phone"
+    "info info"; 
+    gap: 15px;
+}
+
+.name { grid-area: name; }
+.email { grid-area: email; }
+.phone { grid-area: phone; }
+.info { grid-area: info; }
+
+form input[type="text"],
+form input[type="email"] {
+    display: inline-block;
+    width: 100%;
+    padding: 13px;
+    border: none;
+    color: #fff;
+    font-family: 'open sans';
+    background: rgba(37, 37, 33, .7);
+    margin-bottom: 16px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    background: rgba(37, 37, 33, .7);
+    padding: 13px;
+    border: none;
+    color: #fff;
+    font-family: 'open sans';
+    resize: none;
+    margin-bottom: 16px;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    padding: 13px;
+    border: none;
+    color: #fff;
+    background: rgba(37, 37, 33, .7);
+    width: 96px;
+}
