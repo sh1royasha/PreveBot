@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PreverBot</title>
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+   
     <link rel="stylesheet" href="css/style.css">
+  
     <link rel="shortcut icon" href="./images/robot.png" />
+  
+    <!-- link de animaciones -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
 
@@ -47,13 +58,16 @@
     </header>
 
 
-    <!-- Parte Home -->
+    <!-- titulo de la empresa -->
     <section class="hero" id="home">
         <div class="container">
             <h1 class="head">Prevebot Company</h1>
+            <p class="sub_title">LA PREVENCIÓN QUE HAGAMOS HOY, MARCARÁ EL CAMINO DEL MAÑANA</p>
         </div>
     </section>
 
+
+<!-- parte del home -->
     <section class="dis-sto">
         <div class="container">
             <div class="res-info" style="gap:40px" data-aos="zoom-in">
@@ -63,13 +77,10 @@
             
                 <div class="res-des pad-rig">
                     <div class="global">
-                        <h1 class="head hea-dark">El Robot</h1>
+                        <h1 class="head hea-dark">Preverbot</h1>
                     </div>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Doloremque veniam autem qui magnam ex tempora atque, voluptas
-                         voluptatem, recusandae porro corporis assumenda. 
-                        Aliquam accusamus blanditiis illo, vero quia tempora praesentium.
+                      Robot autónomo y programable para la prevención de contagios y translado de enseres hospitalarfios mediante técnicas de loT
                     </p>
                 </div>
             </div>
@@ -268,6 +279,7 @@
                 <div class="card_serv_header">
                   <img src="./images/iconos/mantenimiento 3.png" alt="">
                 </div>
+                <!--  -->
                 <div class="card_serv_body">
                   <h2>Mantenimiento Correctivo</h2>
                 </div>
@@ -329,10 +341,7 @@
                       </div>
                       <div class="card_mis_body">
                         <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                          Doloremque veniam autem qui magnam ex tempora atque, voluptas
-                           voluptatem, recusandae porro corporis assumenda. 
-                          Aliquam accusamus blanditiis illo, vero quia tempora praesentium.
+                          Salvaguardar la salud de las personas a través de la  "eliminación" del contacto directo con otras personas en una unidad medica en Mexio.
                       </p>
                       </div>
                     </div>
@@ -352,10 +361,7 @@
                     </div>
                     <div class="card_vis_body">
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Doloremque veniam autem qui magnam ex tempora atque, voluptas
-                         voluptatem, recusandae porro corporis assumenda. 
-                        Aliquam accusamus blanditiis illo, vero quia tempora praesentium.
+                        Ser lideres en innovación mexicana en el mercado de asistentes robóticos en el serctor médico.
                     </p>
                     </div>
                   </div>
@@ -389,14 +395,44 @@
                   </form>
                 </div>
 
+                <div class="footer_links">
+                  <ul>
+                    <li>
+                      <a href="">
+                        <i class='bx bxl-facebook'></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <i class='bx bxl-instagram' ></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <i class='bx bxl-whatsapp' ></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <i class='bx bxl-twitter' ></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
             </div>
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
 
-        const selectElement = function(element) {
+    $(document).ready(function(){
+
+      const selectElement = function(element) {
             return document.querySelector(element);
         }
 
@@ -408,7 +444,22 @@
             body.classList.toggle('open');
         })
 
+        $(window).scroll(function() {        
+          var scroll = $(window).scrollTop();    
+          if (scroll >= 10) {
+            $("header").addClass("down"); 
+            $(".nav-link").addClass("down");    
+          }else{
+            $("header").removeClass("down");
+            $(".nav-link").removeClass("down"); 
+          }
+        });
+
         AOS.init();
+
+    })
+
+       
 
     </script>
 
